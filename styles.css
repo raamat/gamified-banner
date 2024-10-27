@@ -1,0 +1,163 @@
+@import url(assets/vendor/normalize.css);
+@import url(assets/vendor/fonts/fonts.css);
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  justify-content: center;
+  position: relative;
+  background-color: #edf6ff;
+  user-select: none;
+}
+
+.shelf {
+  background-image: url(assets/images/shelf.svg);
+  width: 212px;
+  height: 431px;
+  margin: 28px 44px 141px;
+}
+
+.product {
+  position: absolute;
+  cursor: grab;
+  touch-action: none;
+  transition: all 0.15ms ease;
+}
+
+.suspend {
+  transition-duration: 1s;
+}
+
+.product:not(.suspend) {
+  cursor: grabbing;
+}
+
+.wine {
+  top: 25px;
+  left: 66px;
+}
+
+.milk {
+  top: 59px;
+  left: 108px;
+}
+
+.jam {
+  top: 108px;
+  left: 147px;
+}
+
+.cheese {
+  top: 117px;
+  left: 202px;
+}
+
+.meat {
+  top: 195px;
+  left: 52px;
+  transform: rotate(-5.6deg);
+}
+
+.ham {
+  top: 196px;
+  left: 102px;
+}
+
+.butter {
+  top: 204px;
+  left: 173px;
+}
+
+.pineapple {
+  top: 265px;
+  left: 57px;
+}
+
+.bananas {
+  top: 292px;
+  left: 102px;
+}
+
+.apple {
+  top: 304px;
+  left: 159px;
+}
+
+.salad {
+  top: 295px;
+  left: 200px;
+}
+
+.basket {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 371px;
+  left: 12px;
+  width: 276px;
+  height: 77px;
+  background-image: url(assets/images/basket.svg);
+  background-repeat: no-repeat;
+  padding-top: 153px;
+  z-index: 100;
+}
+
+.pallet {
+  position: absolute;
+  width: 170px;
+  height: 100px;
+  left: 92px;
+  bottom: 46px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.image-zoom {
+  transform: scale(1.5);
+  transform-origin: bottom;
+  position: static;
+}
+
+.pay-button {
+  background-color: #fce000;
+  width: 174px;
+  height: 56px;
+  border: none;
+  cursor: pointer;
+  border-radius: 16px;
+  color: #21201f;
+  font-family: "YS Text";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: -0.005em;
+  animation: pulse 2s infinite;
+  transition: 1s;
+}
+
+.pay-button:hover {
+  background-color: #35eb82;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
